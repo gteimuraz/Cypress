@@ -1,2 +1,24 @@
-
-
+describe('template spec', () => {
+    it('passes', () => {
+       cy.Login ()
+       cy.get('.side_account_list > :nth-child(3) > a').click()
+       cy.get('#AccountFrm_firstname').clear()
+       cy.get('#AccountFrm_firstname').type("Teimuraz")
+       cy.get('#AccountFrm_telephone').clear()
+       cy.get('#AccountFrm_telephone').type("593009636")
+       cy.get('#AccountFrm_fax').clear()
+       cy.get('#AccountFrm_fax').type("არ მაქვს")
+       cy.get('.col-md-12 > .btn-orange').click()
+       cy.contains("Success: Your account has been successfully updated.").should("be.visible")
+       cy.get('.side_account_list > :nth-child(5) > a').click()
+       cy.get('tr > .pull-right > .btn').click()
+       cy.get('#AddressFrm_address_2').type("სოლოლაკი, ლ.ასათიანის32")
+       cy.get('.col-md-12 > .btn-orange').click()
+       cy.contains('Your address has been successfully updated').should("be.visible")
+       cy.get('.side_account_list > :nth-child(4) > a').click()
+       cy.get('#PasswordFrm_current_password').type("12345678")
+       cy.get('#PasswordFrm_password').type("87654321")
+       cy.get('#PasswordFrm_confirm').type("87654321")
+       cy.get('.col-md-12 > .btn-orange').click()
+    })
+})

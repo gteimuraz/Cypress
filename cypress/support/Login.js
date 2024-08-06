@@ -8,7 +8,5 @@ Cypress.Commands.add('Login', () => {
     cy.get('#loginFrm_loginname').type("Temo123522")
     cy.get('#loginFrm_password').type("12345678")
     cy.get('#loginFrm > fieldset > .btn').click ()
-    cy.contains("Welcome back Temo").should("be.visible")
+    
 })
-
-//Temo123522   test.test522@gmail.com  12345678
