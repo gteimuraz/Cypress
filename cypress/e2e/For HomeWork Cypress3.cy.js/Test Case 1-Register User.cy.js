@@ -1,5 +1,5 @@
 describe('template spec', () => {
-  it('passes', () => {
+  it.only('passes', () => {
     cy.visit('http://automationexercise.com')
 //     1. Launch browser
 // 2. Navigate to url 'http://automationexercise.com'
