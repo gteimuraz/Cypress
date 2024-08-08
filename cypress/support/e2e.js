@@ -17,5 +17,6 @@
 import './commands'
 import './Login'
 import './Register'
+import './newLogin'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

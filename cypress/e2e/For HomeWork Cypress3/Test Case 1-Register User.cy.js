@@ -23,6 +23,7 @@ cy.get('[data-qa="days"]').select("11")
 cy.get('[data-qa="months"]').select("6")
 cy.get('[data-qa="years"]').select("2000")
 // 10. Select checkbox 'Sign up for our newsletter!'
+
 // 11. Select checkbox 'Receive special offers from our partners!'
 // 12. Fill details: First name, Last name, Company, Address, Address2, Country, State, City, Zipcode, Mobile Number
 // 13. Click 'Create Account button'
