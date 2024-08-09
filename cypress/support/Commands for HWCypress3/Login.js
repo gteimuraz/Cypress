@@ -1,5 +1,5 @@
 // Cypress.Commands.add('Login', () => {
-//     cy.visit('https://automationteststore.com/')
+//     cy.visit('https://automationexercise.com')
 
 //     let loggingName='Temo123522'
 //     let password='12345678'
