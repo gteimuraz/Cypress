@@ -1,12 +1,8 @@
-// Cypress.Commands.add('Login', () => {
-//     cy.visit('https://automationexercise.com')
-
-//     let loggingName='Temo123522'
-//     let password='12345678'
-
-//     cy.get('#customer_menu_top > li > a').click()
-//     cy.get('#loginFrm_loginname').type("Temo123522")
-//     cy.get('#loginFrm_password').type("12345678")
-//     cy.get('#loginFrm > fieldset > .btn').click ()
-    
-// })
+Cypress.Commands.add("Login", (email,password) => {
+    cy.visit('https://www.automationexercise.com')
+    cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
+    cy.get('[data-qa="login-email"]').type("temo.temo@gmail.com")
+    cy.get('[data-qa="login-password"]').type("temo123321")
+    cy.get('[data-qa="login-button"]').click()
+    cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
+})

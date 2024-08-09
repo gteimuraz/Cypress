@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './Commands for HWCypress3/Register'
 // import './Commands for HWCypress3/Login'
 // import './Commands for HWCypress3/newLogin'
 // Alternatively you can use CommonJS syntax:

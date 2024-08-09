@@ -1,18 +1,15 @@
-describe('template spec', () => {
-    beforeEach(() => {
+Cypress.Commands.add("Register", (email,password) => {
         cy.visit('https://www.automationexercise.com')
-    })
-    it.only('Register', () => {
             let random = Math.round((Math.random() * 1000))
-            const loggingName = "Temo" + random
+            cy.log(email,password)
             cy.get('.active > :nth-child(1) > h2').should("be.visible")
             cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
             cy.get('.signup-form > h2').should("be.visible")
             cy.get('[data-qa="signup-name"]').type("Temo" + random)
-            cy.get('[data-qa="signup-email"]').type("temo.temo"+random+"@gmail.com")
+            cy.get('[data-qa="signup-email"]').type(email)
             cy.get('[data-qa="signup-button"]').click()
             cy.get('#id_gender1').click()
-            cy.get('[data-qa="password"]').type("temo123321"+random)
+            cy.get('[data-qa="password"]').type(password)
             cy.get('[data-qa="days"]').select("3")
             cy.get('[data-qa="months"]').select("December")
             cy.get('[data-qa="years"]').select("1987")
@@ -32,5 +29,4 @@ describe('template spec', () => {
             cy.contains("Account Created!").should("be.visible")
             cy.get('[data-qa="continue-button"]').click()
             cy.get('.shop-menu > .nav > :nth-child(4) > a').click()
-        })
-    })
+})
