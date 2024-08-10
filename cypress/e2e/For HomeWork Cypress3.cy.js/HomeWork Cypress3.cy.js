@@ -1,11 +1,15 @@
-describe('template spec', () => {
-    it.only('passes', () => {
-        let random = Math.round((Math.random() * 1000))
-        let email="temo.temo"+random+"@gmail.com"
-        let password="temo123321"+random
-
-        cy.log (random)
-        cy.Register (email, password)
-        cy.log ("is registered")
+describe('Home Work', () => {
+    beforeEach(() => {
+        cy.visit('https://www.automationexercise.com/register')
+        cy.fixture("users").as("usersData");
+    });
+    it('Register', function () {
+        cy.Register(this.usersData.ValidUser.email, this.usersData.ValidUser.password)
+    })
+    it('Login', function () {
+        cy.Login(this.usersData.ValidUser.email, this.usersData.ValidUser.password)
+    })
+    it('Login2Incorrect', function () {
+        cy.Login2(this.usersData.InvUser.email, this.usersData.InvUser.password)
     })
 })
