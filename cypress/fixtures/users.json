@@ -1,0 +1,10 @@
+{
+    "ValidUser": {
+      "email": "temo.temo@gmail.com",
+      "password": "temo123321"
+    },
+    "InvUser": {
+      "email": "temo.test.6@gmail.com",
+      "password": "temo555"
+    }
+  }
