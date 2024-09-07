@@ -1,4 +1,4 @@
-describe('Registration with Valid Cridentials', (email,password) => {
+describe('Registration with Valid Cridentials', () => {
     it('Register', () => {
         cy.visit('https://testzootopia.loremipsum.ge')
         cy.fixture ("user.json").as("userData");
