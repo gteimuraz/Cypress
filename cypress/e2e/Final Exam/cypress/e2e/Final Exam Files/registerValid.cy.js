@@ -1,7 +1,7 @@
-describe('Registration with Valid Cridentials', () => {
+describe('Registration with Valid Cridentials', (Email,Password) => {
     it('Register', () => {
         cy.visit('https://testzootopia.loremipsum.ge')
-        // cy.fixture ("user.json").as("userData");
+        cy.fixture('user').as('userData');
         let random = Math.round((Math.random() * 1000))
         cy.get('.menu-pop > .rprof').click()
         cy.get('.input-shablon > p > a').click()
